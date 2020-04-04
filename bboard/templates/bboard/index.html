@@ -1,0 +1,25 @@
+{% extends "layout/basic.html" %}
+{% block content %}
+    {% for bb in bbs %}
+    <div class="{% cycle 'c1' 'c2' %}">
+        <h3>{{ forloop.counter }}{{ '.' }}&nbsp;{{ bb.title }} </h3>
+        <p>{{ bb.content }}</p>
+        <p>{{ bb.published|date:"d.m.Y" }}</p>
+        <p><a href="{%url 'by_rubric' bb.rubric.pk%}">{{ bb.rubric.name}}</a></p>
+    </div>
+    {% endfor %}
+
+ <!--  пагинатор  -->
+    <div>
+        {% if page.has_previous %}
+        <a href="?page={{ page.previous_page_number }}"><Предыдущая</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        {%endif%}
+        Страница {{ page.number }} из {{ page.paginator.num_pages }}
+        {% if page.has_next %}
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+         <a href="?page={{ page.next_page_number }}">Следующая></a>
+        {%endif%}
+    </div>
+
+{% endblock %}

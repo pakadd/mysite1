@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif; Oswald;
+
+}
+a {
+text-decoration: none;
+}
+a:hover {
+    color: #800000; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline; /* Добавляем подчеркивание */
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+header h1 {
+    font-size: 40pt;
+    text-transform: uppercase;
+	text-align: center;
+	background: url("bg.jpg") left / auto 100% no-repeat;
+}
+nav {
+    font-size: 16px;
+    width: 250px;
+    float: left;
+}
+nav a {
+    display: block;
+    margin: 10px 0px;
+
+}
+section {
+    margin-left: 270px;
+}
+.c1 {
+padding-left: 20px;
+background-color: #F0FFFF;
+}
+.c2 {
+padding-left: 20px;
+background-color: #D0FFFF;
+}

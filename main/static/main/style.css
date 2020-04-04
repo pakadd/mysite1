@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif; Oswald;
+
+}
+header h1 {
+    background: url("bg.jpg") left / auto 100% no-repeat;
+}
+.root {
+    font-size: larger;
+}
+.forma1 {
+max-width: 600px;
+}
+img.main-image {
+    width: 300px;
+}
+img.additional-image {
+    width: 180px;
+}

@@ -1,0 +1,18 @@
+{% extends "layout/basic.html"%}
+{%block title%}
+    {{current_rubric.name}}
+{%endblock%}
+
+{%block content%}
+
+    <h2>{{current_rubric.name}}</h2>
+    {% for bb in bbs %}
+    <div class="{% cycle 'c1' 'c2' %}">
+        <h3>{{ bb.title }} </h3>
+        <p>{{ bb.content }}&nbsp;<b>Цена:</b>&nbsp;{{ bb.price }}&nbsp;руб.</p>
+        <p>Размещено:&nbsp;{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+        <p><a href="{% url 'detail' pk=bb.pk %}">{{ 'Подробнее...' }}</a></p>
+    </div>
+    {% endfor %}
+{%endblock content%}
+
